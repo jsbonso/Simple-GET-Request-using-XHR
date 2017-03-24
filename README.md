@@ -35,21 +35,20 @@ You can change the targetUrl variable with any REST API or any webservice that y
 <script>
 function getData() {
   var xhttp = new XMLHttpRequest();
-  var targetUrl = "https://angelfire-af88c.firebaseio.com/students.json";
+  var targetUrl = 'https://angelfire-af88c.firebaseio.com/students.json';
   
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }else if (this.status){
-		document.getElementById("demo").innerHTML = "Can not access: " + targetUrl 
-			+ " <br /> Response: " + this.status + " " + this.responseText;
-	}else{
-		document.getElementById("demo").innerHTML = "Loading... ";
-	}
+      document.getElementById('demo').innerHTML = this.responseText;
+    } else if (this.status) {
+      document.getElementById('demo').innerHTML = 'Can not access: ' + targetUrl 
+	+ ' <br /> Response: ' + this.status + ' ' + this.responseText;
+    } else {
+      document.getElementById('demo').innerHTML = 'Loading...';
+    }
   };
   
-  xhttp.open("GET", targetUrl, true);
+  xhttp.open('GET', targetUrl, true);
   xhttp.send();
 }
 </script>
