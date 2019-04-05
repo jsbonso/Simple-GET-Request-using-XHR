@@ -18,10 +18,20 @@ the tools and frameworks they are using.
 Hence, it's good to have this simple example as a refresher. 
 
 
-To run this example, just open the GET Request using XHR.html and click the GET Data button. That's simple!
+
+# Demo
+See it in action here: 
+https://jsbonso.github.io/Simple-GET-Request-using-XHR/
+
+
+# Running Locally
+
+To run this example on your machine, just open the index.html file and click the GET Data button. That's simple!
+
 
 You can change the targetUrl variable with any REST API or any webservice that you have.
 
+```javascript
 <script>
 function getData() {
   var xhttp = new XMLHttpRequest();
@@ -43,7 +53,7 @@ function getData() {
   xhttp.send();
 }
 </script>
-
+```
 
 Wanna be fancy? Then you can run this using any HTTP Server, like http-server from NPM: https://www.npmjs.com/package/http-server
 
