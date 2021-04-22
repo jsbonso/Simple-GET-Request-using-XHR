@@ -35,7 +35,7 @@ You can change the targetUrl variable with any REST API or any webservice that y
 <script>
 function getData() {
   var xhttp = new XMLHttpRequest();
-  var targetUrl = "https://angelfire-af88c.firebaseio.com/students.json";
+  var targetUrl = "https://pokeapi.co/api/v2/pokemon/pikachu";
   
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
