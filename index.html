@@ -19,6 +19,31 @@ Hence, it's good to have this simple example as a refresher.
 <title>Simple GET Request using XHR </title>
 <body>
 
+	<h1>How to invoke a simple GET Request using XHR without ANY fany JavaScript Framework (React, Vue, Angular etc)</h1>
+	<br />
+	<h2>Source code: </h2>
+	<pre>
+function getData() {
+  var xhttp = new XMLHttpRequest();
+  var targetUrl = "https://pokeapi.co/api/v2/pokemon/pikachu";
+  
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }else if (this.status){
+		document.getElementById("demo").innerHTML = "Can not access: " + targetUrl 
+			+ " <br /> Response: " + this.status + " " + this.responseText;
+	}else{
+		document.getElementById("demo").innerHTML = "Loading... ";
+	}
+  };
+  
+  xhttp.open("GET", targetUrl, true);
+  xhttp.send();
+}
+	</pre>
+
 <h2>XHR (XMLHttpRequest) GET Request Example</h2>
 <button type="button" onclick="getData()">GET Data</button>
 <p id="demo"></p>
